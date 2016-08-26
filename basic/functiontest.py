@@ -1,4 +1,13 @@
 # coding=utf-8
+
+"""
+函数
+@author: JellyChen
+@software: PyCharm
+@file: functiontest.py
+@time: 2016/8/26 17:52
+"""
+
 import math
 import time
 
@@ -41,25 +50,30 @@ def sum1(a1, a2):
     return total
 
 
-func1("hello")
-func2(1, 2)
-pt2 = 2
-func2(p2=pt2, p1=1)
-print pt2
-func2(1, pt2)
-print pt2
-listtest = [4, 5, 6, 7]
-func3(listtest)
-print listtest
+def run():
+    func1("hello")
+    func2(1, 2)
+    pt2 = 2
+    func2(p2=pt2, p1=1)
+    print pt2
+    func2(1, pt2)
+    print pt2
+    listtest = [4, 5, 6, 7]
+    func3(listtest)
+    print listtest
 
-func4('a', 'b,c', 'd', 'e')
+    func4('a', 'b,c', 'd', 'e')
 
-print sumt(3, 4)
+    print sumt(3, 4)
 
-print sum1(1, 10)
+    print sum1(1, 10)
 
-print dir(time)
-print dir(math)
-print dir(timetest)
+    print dir(time)
+    print dir(math)
+    print dir(timetest)
+    cal_test()
+    return
 
-cal_test()
+
+if __name__ == '__main__':
+    run()
