@@ -9,6 +9,5 @@
 """
 import basic
 
-# basic.hello.test()
 IO_test = basic.IO_test
 help(IO_test)

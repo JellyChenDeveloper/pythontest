@@ -9,6 +9,7 @@
 """
 
 def run():
+    """文件测试函数"""
     print "hello,world!"
     print "你好"
 

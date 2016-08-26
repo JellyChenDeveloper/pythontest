@@ -10,6 +10,7 @@
 
 
 def run():
+    """文件测试函数"""
     str = raw_input("请输入：")
     print str
     return
