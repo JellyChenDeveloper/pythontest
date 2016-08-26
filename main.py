@@ -15,4 +15,5 @@ import basic
 # help(basic.hello)
 # basic.timetest.run()
 # help(basic.timetest)
-help(basic.classtest)
+# help(basic.classtest)
+basic.classtest.run()
