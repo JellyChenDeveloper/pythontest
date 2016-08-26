@@ -12,3 +12,4 @@ import IO_test
 import functiontest
 import hello
 import timetest
+import classtest

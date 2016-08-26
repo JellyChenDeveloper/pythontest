@@ -1,7 +1,7 @@
 # coding=utf-8
 
 """
-开始
+开始python之旅
 @author: JellyChen
 @software: PyCharm
 @file: hello.py
@@ -9,7 +9,7 @@
 """
 
 def run():
-    """文件测试函数"""
+    """ run -- 文件测试函数 """
     print "hello,world!"
     print "你好"
 
@@ -51,7 +51,7 @@ def run():
     tup = (1, 2, 3, 4, '123', 'asd')
     print tup
     del tup
-    print tup
+    # print tup # 注释去掉后程序失败，因为删除
     return
 
 

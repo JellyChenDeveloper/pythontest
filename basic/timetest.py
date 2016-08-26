@@ -18,7 +18,7 @@ def cal_test():
 
 
 def run():
-    """文件测试函数"""
+    """ run -- 文件测试函数 """
     ticks = time.time()
     print ticks
 

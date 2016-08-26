@@ -51,7 +51,7 @@ def sum1(a1, a2):
 
 
 def run():
-    """文件测试函数"""
+    """ run -- 文件测试函数 """
     func1("hello")
     func2(1, 2)
     pt2 = 2

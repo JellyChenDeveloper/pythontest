@@ -9,5 +9,10 @@
 """
 import basic
 
-IO_test = basic.IO_test
-help(IO_test)
+# help(basic.IO_test)
+# basic.IO_test.run()
+# basic.hello.run()
+# help(basic.hello)
+# basic.timetest.run()
+# help(basic.timetest)
+help(basic.classtest)
