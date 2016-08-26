@@ -11,6 +11,10 @@ print localtime
 print time.asctime(localtime)
 print time.strftime("%Y-%m-%d %H:%M:%S", localtime)
 
+def cal_test():
+    print calendar.month(2016, 1)
+    return
+
 print '日历'
 cal1 = calendar.month(2016, 1)
 print cal1
