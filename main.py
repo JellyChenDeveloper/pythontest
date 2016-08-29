@@ -16,4 +16,4 @@ import basic
 # basic.timetest.run()
 # help(basic.timetest)
 # help(basic.classtest)
-basic.classtest.run()
+basic.mysqltest.run()
