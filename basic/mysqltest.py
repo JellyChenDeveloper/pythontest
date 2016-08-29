@@ -9,7 +9,7 @@
 """
 import MySQLdb
 
-db = MySQLdb.connect("localhost", "root", "root", "msb_crm")
+db = MySQLdb.connect("127.0.0.1", "root", "root", "msb_crm")
 cursor = db.cursor()
 
 
