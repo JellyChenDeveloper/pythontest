@@ -9,7 +9,7 @@
 """
 import MySQLdb
 
-db = MySQLdb.connect("127.0.0.1", "root", "root", "msb_crm")
+db = MySQLdb.connect("127.0.0.1", "root", "root", "gameinfo")
 cursor = db.cursor()
 
 
@@ -21,7 +21,7 @@ def getVersion():
 
 
 def getusers():
-    sql = '''select * from crm_users limit 20'''
+    sql = '''select * from map limit 20'''
     try:
         cursor.execute(sql)
         # 获取所有记录列表
