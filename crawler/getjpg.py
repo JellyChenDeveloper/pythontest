@@ -19,8 +19,16 @@ def getImg(html):
         x += 1
 
 
-html = getHtml("http://tieba.baidu.com/p/4745904310")
+def test():
+    html = getHtml("http://tieba.baidu.com/p/4745904310")
+    print getImg(html)
+    # http://imgsrc.baidu.com/forum/w%3D580/sign=e6e6f428ac0f4bfb8cd09e5c334e788f/be248d44ad345982d6537e2504f431adc9ef84a1.jpg
 
-print getImg(html)
 
-# http://imgsrc.baidu.com/forum/w%3D580/sign=e6e6f428ac0f4bfb8cd09e5c334e788f/be248d44ad345982d6537e2504f431adc9ef84a1.jpg
+def run():
+    """ run -- 文件测试函数 """
+    test()
+
+
+if __name__ == "__main__":
+    run()

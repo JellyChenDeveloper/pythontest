@@ -9,11 +9,10 @@
 """
 import MySQLdb
 
-db = MySQLdb.connect("127.0.0.1", "root", "root", "gameinfo")
-cursor = db.cursor()
-
 
 def getVersion():
+    db = MySQLdb.connect("127.0.0.1", "root", "root", "gameinfo")
+    cursor = db.cursor()
     cursor.execute("SELECT VERSION()")
     data = cursor.fetchone()
     print "Database version : %s " % data
@@ -21,6 +20,8 @@ def getVersion():
 
 
 def getusers():
+    db = MySQLdb.connect("127.0.0.1", "root", "root", "gameinfo")
+    cursor = db.cursor()
     sql = '''select * from map limit 20'''
     try:
         cursor.execute(sql)
