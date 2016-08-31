@@ -5,9 +5,7 @@
 @author: JellyChen
 @software: PyCharm
 @file: __init__.py
-@time: 2016/8/30 14:43
+@time: 2016/8/31 14:08
 """
 
-import bs4test
-import getjpg
 import tutorial
