@@ -29,11 +29,24 @@ class CovelCrawler:
         """ run -- """
         self.__basehrefprase = urlparse.urlparse(href)
         # self.__saveFile(self.__getChapterContent(href))
-        self.__praseTotalList(href)
+        pagelist = self.__praseTotalList(href)
+        novellist = []
+        for pageurl in pagelist:
+            subnovelist = self.__getNovelList(pageurl)
+            novellist.append(subnovelist)
+        print len(novellist)
+        return novellist
 
     def __getNovelList(self, baseurl):
         """ __getNovelList -- 获取小说列表 """
-        return
+        html = urlopen(baseurl).read()
+        soup = BeautifulSoup(html, 'html5lib')
+        booklist = soup.find(id='content').find('table').find_all('a', href=re.compile(r"/book/"))
+        books = []
+        for book in booklist:
+            bookinfo = {'name': book.string, "url": book.get('href')}
+            books.append(bookinfo)
+        return books
 
     def __praseTotalList(self, href):
         """ __praseList -- """
@@ -45,7 +58,7 @@ class CovelCrawler:
             url = urlparse.urlunparse((self.__basehrefprase.scheme, self.__basehrefprase.netloc,
                                        output, "", "", ""))
             pagehreflist.append(url)
-        print pagehreflist[pagecount-1]
+        # print pagehreflist[pagecount-1]
         return pagehreflist
 
     def __getPageCount(self, href):
