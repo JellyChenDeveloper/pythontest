@@ -10,6 +10,8 @@
 from bs4 import BeautifulSoup
 from urllib import urlopen
 import sys
+import urlparse
+import re
 
 reload(sys)
 sys.setdefaultencoding("utf-8")
@@ -18,19 +20,40 @@ sys.setdefaultencoding("utf-8")
 class CovelCrawler:
     ''' class CovelCrawler 输入基链接获取整个网站的数据 '''
 
-    __basehref = ''
+    __basehrefprase = ''
 
     def __init__(self):
         return
 
     def run(self, href):
         """ run -- """
-        self.__basehref = href
-        self.__saveFile(self.__getChapterContent(href))
+        self.__basehrefprase = urlparse.urlparse(href)
+        # self.__saveFile(self.__getChapterContent(href))
+        self.__praseTotalList(href)
 
     def __getNovelList(self, baseurl):
         """ __getNovelList -- 获取小说列表 """
         return
+
+    def __praseTotalList(self, href):
+        """ __praseList -- """
+        pagecount = self.__getPageCount(href)
+        pagecount = int(pagecount)
+        pagehreflist = []
+        for i in range(pagecount):
+            output = re.sub(r'(\d)(\.)', str(i + 1) + ".", self.__basehrefprase.path)
+            url = urlparse.urlunparse((self.__basehrefprase.scheme, self.__basehrefprase.netloc,
+                                       output, "", "", ""))
+            pagehreflist.append(url)
+        print pagehreflist[pagecount-1]
+        return pagehreflist
+
+    def __getPageCount(self, href):
+        """ getPageCount -- """
+        html = urlopen(href).read()
+        soup = BeautifulSoup(html, 'html5lib')
+        maxpage = soup.find(id='pagelink').find(class_='last').string
+        return maxpage
 
     def __getChapterList(self, novelurl):
         """ __getChapterList -- 获取章节列表 """
@@ -71,7 +94,9 @@ class CovelCrawler:
 def run():
     """ run -- 文件测试函数 """
     start = CovelCrawler()
-    start.run('http://www.23wx.com/html/64/64788/26397082.html')
+    # start.run('http://www.23wx.com/html/64/64788/26397082.html')
+    start.run('http://www.23wx.com/class/11_1.html')
+
 
 if __name__ == "__main__":
     run()
