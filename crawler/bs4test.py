@@ -1,5 +1,7 @@
 # coding=utf-8
 
+# todo 暂时先停下，学完多线程等内容再继续
+
 """
 测试使用beautifulsoup4
 @author: JellyChen
@@ -7,14 +9,16 @@
 @file: bs4test.py
 @time: 2016/8/29 18:57
 """
+
 from bs4 import BeautifulSoup
 from urllib import urlopen
-import sys
+# import sys
 import urlparse
 import re
 
-reload(sys)
-sys.setdefaultencoding("utf-8")
+
+# reload(sys)
+# sys.setdefaultencoding("utf-8")
 
 
 class CovelCrawler:
