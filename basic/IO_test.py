@@ -11,8 +11,8 @@
 
 def run():
     """ run -- 文件测试函数 """
-    str = raw_input("请输入：")
-    print str
+    tmp_str = raw_input("请输入：")
+    print tmp_str
     return
 
 

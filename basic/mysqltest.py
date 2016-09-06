@@ -10,7 +10,7 @@
 import MySQLdb
 
 
-def getVersion():
+def get_version():
     db = MySQLdb.connect("127.0.0.1", "root", "root", "gameinfo")
     cursor = db.cursor()
     cursor.execute("SELECT VERSION()")

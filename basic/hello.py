@@ -22,30 +22,30 @@ def run():
     print a + b
 
     print "\n字符串类型"
-    str = "qwoliudhoqwnjdjliaushdlqnjwdn"
-    print str[0],
-    print str[-1],
-    print str[-5],
-    print str[5],
-    print str[5:10] * 3,
-    print str[-10:-1]
+    tmp_str = "qwoliudhoqwnjdjliaushdlqnjwdn"
+    print tmp_str[0],
+    print tmp_str[-1],
+    print tmp_str[-5],
+    print tmp_str[5],
+    print tmp_str[5:10] * 3,
+    print tmp_str[-10:-1]
 
     print "列表List(数组)"
-    list = ['1', 2, 3.3, "hello"]
-    print list,
-    print list[3],
-    print list * 2,
-    del list[0]
-    print list,
-    print len(list),
-    print list[:3],
-    print max(list),
-    print min(list)
-    list.append('123')
-    print list
-    print list.count(2)
-    list.reverse()
-    print list
+    tmp_list = ['1', 2, 3.3, "hello"]
+    print tmp_list,
+    print tmp_list[3],
+    print tmp_list * 2,
+    del tmp_list[0]
+    print tmp_list,
+    print len(tmp_list),
+    print tmp_list[:3],
+    print max(tmp_list),
+    print min(tmp_list)
+    tmp_list.append('123')
+    print tmp_list
+    print tmp_list.count(2)
+    tmp_list.reverse()
+    print tmp_list
 
     print "\n元组"
     tup = (1, 2, 3, 4, '123', 'asd')

@@ -19,11 +19,11 @@ class Employee:
         self.salary = salary
         Employee.empCount += 1
 
-    def displayCount(self):
+    def display_count(self):
         """ displayCount --  """
         print "Total Employee %d" % Employee.empCount
 
-    def displayEmployee(self):
+    def display_employee(self):
         """ displayEmployee --  """
         print "Name : ", self.name, ", Salary: ", self.salary
 
@@ -36,10 +36,10 @@ class Employee:
 def run():
     """ run -- 文件测试函数 """
     emp1 = Employee('jelly', 30)
-    emp1.displayCount()
+    emp1.display_count()
     emp2 = Employee("Manni", 5000)
-    emp1.displayCount()
-    emp1.displayEmployee()
+    emp1.display_count()
+    emp1.display_employee()
     print "Total Employee %d" % Employee.empCount
 
     # print "Employee.__doc__:", Employee.__doc__
